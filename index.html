@@ -654,7 +654,7 @@ Fuß in etwa 10 Minuten erreichbar. Parken ist in der Weberstr. ,&nbsp; auf den 
               <ul>
                 <li> Für 2 Nächte zahlen Sie für 2 Personen: 320€ </li>
                 <li> Für jede weitere Nacht: 70€ </li>
-                <li> Für jeden weiteren Erwachsenen: 35€ die Nacht </li>
+                <li> Für jeden weiteren Erwachsenen: 30€ die Nacht </li>
                 <li> Kinder bis 15 Jahre: 20€ die Nacht </li>
                 <li> Bettwäsche und Handtücher sind inklusive </li>
                 <li> Aufbettung auf Anfrage möglich </li>
@@ -732,7 +732,7 @@ Fuß in etwa 10 Minuten erreichbar. Parken ist in der Weberstr. ,&nbsp; auf den 
 function handleInput(adults, childs, nights) {
     let result = 320;
     result = result + 70*(nights-2);
-    result = result + 35*nights*(adults-2);
+    result = result + 30*nights*(adults-2);
 	setAdultPrice(result-60);
 	let childPrice = 20*nights*childs;
 	setChildPrice(childPrice);
