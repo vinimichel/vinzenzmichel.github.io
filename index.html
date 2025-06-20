@@ -652,9 +652,9 @@ Fuß in etwa 10 Minuten erreichbar. Parken ist in der Weberstr. ,&nbsp; auf den 
               <h2> Preise</h2>
               <p>Soviel kosten Ihre Übernachtungen bei uns: </p>
               <ul>
-                <li> Für 2 Nächte zahlen Sie für 2 Personen: 295€ </li>
+                <li> Für 2 Nächte zahlen Sie für 2 Personen: 290€ </li>
                 <li> Für jede weitere Nacht: 60€ </li>
-                <li> Für jeden weiteren Erwachsenen: 30€ die Nacht </li>
+                <li> Für jeden weiteren Erwachsenen: 20€ die Nacht </li>
                 <li> Kinder bis 15 Jahre: 20€ die Nacht </li>
                 <li> Bettwäsche und Handtücher sind inklusive </li>
                 <li> Aufbettung auf Anfrage möglich </li>
@@ -701,7 +701,7 @@ Fuß in etwa 10 Minuten erreichbar. Parken ist in der Weberstr. ,&nbsp; auf den 
                     <tbody>
                       <tr>
                         <td> Erwachsene </td>
-                        <td id="adultPrice"> 235€ </td>
+                        <td id="adultPrice"> 230€ </td>
                       </tr>
                       <tr id="childs">
                         <td> Kinder </td>
@@ -713,7 +713,7 @@ Fuß in etwa 10 Minuten erreichbar. Parken ist in der Weberstr. ,&nbsp; auf den 
                       </tr>
                       <tr class="total">
                         <td class="totalPrice"> Gesamtkosten </td>
-                        <td class="totalPrice"> 295€ </td>
+                        <td class="totalPrice"> 290€ </td>
                       </tr>
                     </tbody>
                   </table>
@@ -730,9 +730,9 @@ Fuß in etwa 10 Minuten erreichbar. Parken ist in der Weberstr. ,&nbsp; auf den 
   handleInput(adults,childs,nights);
 });
 function handleInput(adults, childs, nights) {
-    let result = 295;
+    let result = 290;
     result = result + 60*(nights-2);
-    result = result + 30*nights*(adults-2);
+    result = result + 20*nights*(adults-2);
 	setAdultPrice(result-60);
 	let childPrice = 20*nights*childs;
 	setChildPrice(childPrice);
