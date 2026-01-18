@@ -654,7 +654,7 @@ Fuß in etwa 10 Minuten erreichbar. Parken ist in der Weberstr. ,&nbsp; auf den 
               <ul>
                 <li> Für 2 Nächte zahlen Sie für 2 Personen: 280€ </li>
                 <li> Für jede weitere Nacht: 75€ für 2 Personen </li>
-                <li> Für jeden weiteren Erwachsenen: 50€ die Nacht </li>
+                <li> Für jeden weiteren Erwachsenen: 30€ die Nacht </li>
                 <li> Kinder bis 14 Jahre: 15€ die Nacht </li>
 				<li> Kinder bis 3 Jahre kostenlos </li>
                 <li> Bettwäsche und Handtücher sind inklusive </li>
@@ -702,7 +702,7 @@ Fuß in etwa 10 Minuten erreichbar. Parken ist in der Weberstr. ,&nbsp; auf den 
                     <tbody>
                       <tr>
                         <td> Erwachsene </td>
-                        <td id="adultPrice"> 210€ </td>
+                        <td id="adultPrice"> 220€ </td>
                       </tr>
                       <tr id="childs">
                         <td> Kinder </td>
@@ -714,7 +714,7 @@ Fuß in etwa 10 Minuten erreichbar. Parken ist in der Weberstr. ,&nbsp; auf den 
                       </tr>
                       <tr class="total">
                         <td class="totalPrice"> Gesamtkosten </td>
-                        <td class="totalPrice"> 270€ </td>
+                        <td class="totalPrice"> 280€ </td>
                       </tr>
                     </tbody>
                   </table>
@@ -733,7 +733,7 @@ Fuß in etwa 10 Minuten erreichbar. Parken ist in der Weberstr. ,&nbsp; auf den 
 function handleInput(adults, childs, nights) {
     let result = 280;
     result = result + 75*(nights-2);
-    result = result + 50*nights*(adults-2);
+    result = result + 30*nights*(adults-2);
 	setAdultPrice(result-60);
 	let childPrice = 15*nights*childs;
 	setChildPrice(childPrice);
