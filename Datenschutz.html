@@ -11,16 +11,31 @@
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
     <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
     <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #111111;
+            background-color: #ffffff;
+        }
+        h2, h3, h4 {
+            font-family: Montserrat, sans-serif;
+            font-weight: 400;
+        }
         .main {
             margin: 50px 20%;
         }
         #back {
-            font-size: 25px;
+            font-size: 1.5rem;
         }
-        body {
-            background-color: #f2f2f2;
+        #back a {
+            color: #478ac9;
+            text-decoration: none;
         }
-
+        #back a:hover,
+        #back a:focus-visible {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
@@ -37,9 +52,10 @@
         line-height: 1.5;
     }
     #footerContainer {
-        max-width: 1170px ;
-        margin: auto;
-        margin-left: 10%;
+        max-width: 1170px;
+        box-sizing: border-box;
+        margin: 0 auto;
+        padding: 0 40px;
     }
     #footerRow {
         display: flex;
@@ -51,7 +67,7 @@
     }
     .footerCol h4 {
         margin-top: 0px;
-        font-size: 17px;
+        font-size: 18px;
         color: white;
         text-transform: capitalize;
         margin-bottom: 27px;
@@ -63,7 +79,7 @@
         position: absolute;
         left: 0;
         bottom: -10px;
-        background-color: #e91e63;
+        background-color: #478ac9;
         height: 2px;
         width: 50px;
     }
@@ -94,9 +110,9 @@
         color: #fff ;
         padding-left: 8px ;
     }
-    .address {  
+    .address {
         color: #ddd ;
-        font-size: 15px;
+        font-size: 16px;
         margin-top: 2px !important;
         margin-bottom: 2px !important;   
     }
