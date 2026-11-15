@@ -51,10 +51,11 @@ FLAT = dict(
     key="wohnung",
     label="Grundriss der Wohnung im 2. Obergeschoss: Zur Neißstraße liegen zwei Schlafzimmer mit je einem Doppelbett, "
           "eines davon mit eigenem Bad mit Badewanne. Hinter den Schlafzimmern führt der Flur an einem Duschbad vorbei "
-          "nach hinten in die Wohnküche mit Sofa und Küchenzeile, von dort geht es auf den Balkon zum Hof. "
-          "Die Wohnungstür liegt am Treppenhaus mit Aufzug.",
+          "nach hinten in die Wohnküche, von dort geht es auf den Balkon zum Hof. Neben dem Aufzug liegt ein Abstellraum, "
+          "dessen Tür in die Küche aufgeht. Die Wohnungstür liegt am Treppenhaus mit Aufzug.",
     fills=[
-        ("p-guest", [(45, 95), (620, 95), (620, 655), (465, 655), (465, 780), (45, 780)]),  # Wohnküche
+        ("p-guest", [(45, 95), (620, 95), (620, 455), (465, 455), (465, 780), (45, 780)]),  # Wohnküche
+        ("p-room", rect(480, 470, 620, 640)),  # Abstellraum
         ("p-hall", [(45, 800), (450, 800), (450, 1270), (830, 1270), (830, 1395), (270, 1395), (270, 1030),
                     (45, 1030)]),  # Flur
         ("p-room", rect(45, 1045, 255, 1395)),  # Duschbad
@@ -69,7 +70,8 @@ FLAT = dict(
         ("p-guest", rect(300, 778, 420, 802)),  # Rundbogen Flur/Wohnküche
         ("p-hall", rect(448, 880, 467, 970)),  # Wohnungstür
         ("p-hall", rect(500, 828, 585, 847)),  # Aufzugstür
-        ("p-room", rect(253, 1210, 272, 1290)),  # Duschbad
+        ("p-room", rect(253, 1300, 272, 1380)),  # Duschbad
+        ("p-room", rect(463, 520, 482, 600)),  # Abstellraum
         ("p-guest", rect(365, 1393, 445, 1452)),  # Schlafzimmer links
         ("p-guest", rect(720, 1393, 800, 1452)),  # Schlafzimmer rechts
         ("p-room", rect(180, 1718, 310, 1737)),  # Schiebetür ins Bad
@@ -79,7 +81,8 @@ FLAT = dict(
              ("back", 93, 186), ("back", 340, 432)],
     thin=[
         door((450, 970), (450, 880), (360, 970)),  # Wohnungstür
-        door((255, 1290), (255, 1210), (175, 1290)),  # Duschbad
+        door((255, 1380), (255, 1300), (175, 1380)),  # Duschbad
+        door((465, 600), (465, 520), (385, 600)),  # Abstellraum, öffnet in die Küche
         door((445, 1450), (365, 1450), (445, 1530)),  # Schlafzimmer links
         door((800, 1450), (720, 1450), (800, 1530)),  # Schlafzimmer rechts
         door((494, 95), (540, 95), (494, 141)), door((586, 95), (540, 95), (586, 141)),  # Balkontür, zweiflügelig
@@ -87,19 +90,18 @@ FLAT = dict(
         cabin(480, 675, 605, 830),
     ],
     furniture=[
-        bed(55, 1845, 255, 2015, "left"),
+        bed(55, 1860, 245, 2005, "left"),
         bed(630, 1800, 828, 1970, "right"),
-        ellipse(195, 1625, 100, 50) + ellipse(195, 1625, 84, 36),  # freistehende Wanne
-        box(48, 1292, 150, 1392) + ellipse(99, 1342, 9, 9),  # Dusche
-        "M170 200H375V460H290V285H170Z",  # Ecksofa
-        box(560, 150, 618, 640),  # Küchenzeile
+        ellipse(195, 1615, 78, 38) + ellipse(195, 1615, 64, 26),  # freistehende Wanne
+        box(48, 1048, 150, 1150) + ellipse(99, 1099, 9, 9),  # Dusche am hinteren Ende
     ],
     labels=[
-        dict(t=["Wohnküche"], x=280, y=615, cls="p-name"),
+        dict(t=["Wohnküche"], x=255, y=440, cls="p-name"),
+        dict(t=["Abstell-", "raum"], x=550, y=555, cls="p-small", size=26),
         dict(t=["Schlafzimmer"], x=352, y=1912, cls="p-name", along=True, sub="mit eigenem Bad"),
         dict(t=["Schlafzimmer"], x=652, y=1625, cls="p-name", sub="mit Sitzecke"),
         dict(t=["Bad"], x=195, y=1520, cls="p-small", sub="Wanne"),
-        dict(t=["Bad"], x=150, y=1130, cls="p-small", sub="Dusche"),
+        dict(t=["Bad"], x=140, y=1235, cls="p-small", sub="Dusche"),
         dict(t=["Flur"], x=360, y=1180, cls="p-small", along=True),
         dict(t=["Treppenhaus"], x=520, y=1075, cls="p-small", along=True, halo=True),
         dict(t=["Aufzug"], x=542, y=752, cls="p-small", halo=True, size=30),
