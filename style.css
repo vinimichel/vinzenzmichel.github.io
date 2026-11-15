@@ -140,6 +140,7 @@ img { display: block; max-width: 100%; height: auto; }
 .hero-text { display: grid; gap: 22px; padding-bottom: clamp(32px, 6vw, 72px); min-width: 0; }
 .hero h1 { font-size: var(--step-4); font-weight: 500; line-height: 0.98; color: var(--indigo); }
 .lead { font-family: var(--display); font-style: italic; font-weight: 500; font-size: clamp(1.5rem, 2.6vw, 1.875rem); line-height: 1.25; }
+.hero h1 .lead { display: block; margin-top: 22px; color: var(--ink); }
 .hero-text > p:not(.eyebrow):not(.lead) { max-width: 46ch; }
 .traits {
   display: flex; flex-wrap: wrap; gap: 6px 18px;
@@ -433,6 +434,19 @@ textarea { resize: vertical; min-height: 7.5em; }
 :root[data-theme="dark"] .calendar-frame { background: #111; }
 :root[data-theme="dark"] .calendar-frame iframe { filter: invert(0.9) hue-rotate(180deg); }
 .calendar-note { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px 24px; margin-top: 20px; }
+
+/* Häufige Fragen: also in the FAQPage data, so search engines and AI assistants can quote the answers */
+.faq { border-top: 1px solid var(--line); max-width: 860px; }
+.faq details { border-bottom: 1px solid var(--line); }
+.faq summary {
+  display: flex; justify-content: space-between; align-items: baseline; gap: 16px;
+  padding-block: 16px; cursor: pointer; list-style: none; font-weight: 600;
+}
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; flex: none; font-family: var(--display); font-size: 1.5rem; line-height: 1; color: var(--indigo); }
+.faq details[open] summary::after { content: "–"; }
+.faq summary:focus-visible { outline: 2px solid var(--indigo); outline-offset: 3px; }
+.faq details p { margin: 0 0 18px; max-width: 68ch; }
 
 /* Kontakt */
 .contact {
