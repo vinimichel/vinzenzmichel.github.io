@@ -1,12 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://www.urlaub-in-goerlitz.de/</loc>
+    <lastmod>2026-10-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+    <image:image><image:loc>https://www.urlaub-in-goerlitz.de/images/Wohnkche.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.urlaub-in-goerlitz.de/Wohnungsbilder/Balkon.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.urlaub-in-goerlitz.de/Wohnungsbilder/Bettbild.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.urlaub-in-goerlitz.de/Wohnungsbilder/Sessel.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.urlaub-in-goerlitz.de/Wohnungsbilder/zweitesBett.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.urlaub-in-goerlitz.de/Wohnungsbilder/Bad.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.urlaub-in-goerlitz.de/Wohnungsbilder/Badewanne.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.urlaub-in-goerlitz.de/Wohnungsbilder/Wohnzimmer.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.urlaub-in-goerlitz.de/Wohnungsbilder/Stachellampe.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.urlaub-in-goerlitz.de/Wohnungsbilder/Schlafzimmer2.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.urlaub-in-goerlitz.de/Wohnungsbilder/Brett.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.urlaub-in-goerlitz.de/Wohnungsbilder/Flur.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.urlaub-in-goerlitz.de/Wohnungsbilder/Bad2-Dusche.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.urlaub-in-goerlitz.de/Wohnungsbilder/Wohnzimmer2.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.urlaub-in-goerlitz.de/Wohnungsbilder/BettundLampe.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.urlaub-in-goerlitz.de/Wohnungsbilder/Wohnk%C3%BCche.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.urlaub-in-goerlitz.de/images/1531.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.urlaub-in-goerlitz.de/images/2322.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.urlaub-in-goerlitz.de/images/117.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.urlaub-in-goerlitz.de/images/38.JPG</image:loc></image:image>
+    <image:image><image:loc>https://www.urlaub-in-goerlitz.de/images/filmkulisse-neissestrasse.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.urlaub-in-goerlitz.de/images/78.JPG</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.urlaub-in-goerlitz.de/Datenschutz.html</loc>
+    <lastmod>2026-10-24</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
