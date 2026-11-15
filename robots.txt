@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.urlaub-in-goerlitz.de/sitemap.xml
+Sitemap: https://urlaub-in-goerlitz.de/sitemap.xml
