@@ -1,30 +1,30 @@
 /* Self-hosted web fonts (SIL Open Font License), latin subset.
    Served from this site so no visitor data is sent to Google Fonts. */
 @font-face {
-  font-family: 'Montserrat';
+  font-family: 'Albert Sans';
   font-style: normal;
-  font-weight: 300 700;
+  font-weight: 400 600;
   font-display: swap;
-  src: url(fonts/montserrat-latin.woff2) format('woff2');
+  src: url(fonts/albert-sans-latin.woff2) format('woff2');
 }
 @font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 300 800;
-  font-display: swap;
-  src: url(fonts/open-sans-latin.woff2) format('woff2');
-}
-@font-face {
-  font-family: 'Open Sans';
+  font-family: 'Albert Sans';
   font-style: italic;
-  font-weight: 300 800;
+  font-weight: 400;
   font-display: swap;
-  src: url(fonts/open-sans-italic-latin.woff2) format('woff2');
+  src: url(fonts/albert-sans-italic-latin.woff2) format('woff2');
 }
 @font-face {
-  font-family: 'Cormorant Upright';
+  font-family: 'Cormorant Garamond';
   font-style: normal;
-  font-weight: 700;
+  font-weight: 500 600;
   font-display: swap;
-  src: url(fonts/cormorant-upright-700-latin.woff2) format('woff2');
+  src: url(fonts/cormorant-garamond-latin.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+  src: url(fonts/cormorant-garamond-italic-latin.woff2) format('woff2');
 }

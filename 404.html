@@ -1,62 +1,48 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="noindex">
-    <title>Seite nicht gefunden | Ferienwohnung am Biblischen Haus</title>
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
-    <link rel="stylesheet" href="/fonts.css">
-    <style>
-        body {
-            margin: 0;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 24px;
-            box-sizing: border-box;
-            font-family: 'Open Sans', sans-serif;
-            color: #ffffff;
-            text-align: center;
-            background-color: #24262b;
-            background-image: linear-gradient(0deg, rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url("/images/Wohnkche.jpg");
-            background-position: center;
-            background-size: cover;
-        }
-        h1 {
-            font-family: 'Cormorant Upright', serif;
-            font-size: 2.75rem;
-            margin: 0 0 12px;
-        }
-        p {
-            font-size: 1.125rem;
-            line-height: 1.6;
-            margin: 0 0 28px;
-        }
-        a {
-            display: inline-block;
-            background-color: #478ac9;
-            color: #ffffff;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-weight: 700;
-            border-radius: 8px;
-            padding: 10px 30px;
-        }
-        a:hover,
-        a:focus-visible {
-            background-color: #387cbd;
-        }
-    </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Seite nicht gefunden | Ferienwohnung am Biblischen Haus</title>
+<meta name="description" content="Diese Seite gibt es nicht (mehr).">
+<meta name="robots" content="noindex">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<meta name="theme-color" content="#e9e1d2" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#24221e" media="(prefers-color-scheme: dark)">
+<link rel="stylesheet" href="/fonts.css">
+<link rel="stylesheet" href="/style.css">
 </head>
 <body>
-    <main>
-        <h1>Seite nicht gefunden</h1>
-        <p>Die gesuchte Seite gibt es leider nicht (mehr).<br>Alle Informationen zur Ferienwohnung finden Sie auf unserer Startseite.</p>
-        <a href="/">Zur Startseite</a>
-    </main>
+<header class="bar">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="Ferienwohnung am Biblischen Haus, zur Startseite">
+      <svg class="mark" viewBox="0 0 24 30" aria-hidden="true"><path d="M4 28V12a8 8 0 0 1 16 0v16M2 28h20M12 4v24M4 13h16"/></svg>
+      <span>Am Biblischen Haus</span>
+    </a>
+    <a class="button small" href="/#kontakt">Anfragen</a>
+  </div>
+</header>
+
+<main class="notfound">
+  <div class="wrap">
+    <p class="eyebrow">Fehler 404</p>
+    <h1>Seite nicht gefunden</h1>
+    <p>Die gesuchte Seite gibt es leider nicht (mehr). Alle Informationen zur Ferienwohnung finden Sie auf unserer Startseite.</p>
+    <a class="button" href="/">Zur Startseite</a>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-base">
+      <p>© <span id="copyrightYear">2026</span> Ferienwohnung am Biblischen Haus · Urlaub in der Görlitzer Altstadt</p>
+      <p class="footer-links"><a href="/">Startseite</a><a href="/#impressum">Impressum</a><a href="/Datenschutz.html">Datenschutz</a></p>
+    </div>
+  </div>
+</footer>
+<script>document.getElementById('copyrightYear').textContent = new Date().getFullYear();</script>
+
 </body>
 </html>
