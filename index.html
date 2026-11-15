@@ -163,8 +163,8 @@
       </div>
       <figure class="arch portrait">
         <div class="frame">
-          <img src="images/Wohnkche.jpg" width="1600" height="1051" fetchpriority="high"
-               alt="Wohnzimmer mit Sofa und offener Küche unter drei Rundbogenfenstern, darüber eine orientalische Hängelampe.">
+          <a class="zoom" href="images/Wohnkche.jpg"><img src="images/Wohnkche.jpg" width="1600" height="1051" fetchpriority="high"
+               alt="Wohnzimmer mit Sofa und offener Küche unter drei Rundbogenfenstern, darüber eine orientalische Hängelampe."></a>
         </div>
         <figcaption>Wohnzimmer und offene Küche</figcaption>
       </figure>
@@ -180,15 +180,15 @@
       </div>
       <div class="rooms">
         <figure class="arch portrait">
-          <div class="frame"><img src="Wohnungsbilder/Bettbild.jpg" width="1024" height="768" loading="lazy" decoding="async" alt="Schlafzimmer mit Doppelbett, Holzkopfteil und Nachttischlampe am Fenster."></div>
+          <div class="frame"><a class="zoom" href="Wohnungsbilder/Bettbild.jpg"><img src="Wohnungsbilder/Bettbild.jpg" width="1024" height="768" loading="lazy" decoding="async" alt="Schlafzimmer mit Doppelbett, Holzkopfteil und Nachttischlampe am Fenster."></a></div>
           <figcaption><h3>Schlafen</h3><p>Zwei Schlafzimmer mit je einem Doppelbett. Im Wohnzimmer ist bei Bedarf Platz für zwei weitere Erwachsene.</p></figcaption>
         </figure>
         <figure class="arch portrait">
-          <div class="frame"><img src="Wohnungsbilder/Sessel.jpg" width="1024" height="768" loading="lazy" decoding="async" alt="Grüner Samtsessel in einer Rundbogennische mit Bruchsteinmauer und Ziegelboden."></div>
+          <div class="frame"><a class="zoom" href="Wohnungsbilder/Sessel.jpg"><img src="Wohnungsbilder/Sessel.jpg" width="1024" height="768" loading="lazy" decoding="async" alt="Grüner Samtsessel in einer Rundbogennische mit Bruchsteinmauer und Ziegelboden."></a></div>
           <figcaption><h3>Wohnen</h3><p>Wohnzimmer mit offener Küche, Rundbogenfenstern und historischem Mauerwerk.</p></figcaption>
         </figure>
         <figure class="arch portrait">
-          <div class="frame"><img src="Wohnungsbilder/Badewanne.jpg" width="1024" height="682" loading="lazy" decoding="async" alt="Freistehende Badewanne im großen Bad."></div>
+          <div class="frame"><a class="zoom" href="Wohnungsbilder/Badewanne.jpg"><img src="Wohnungsbilder/Badewanne.jpg" width="1024" height="682" loading="lazy" decoding="async" alt="Freistehende Badewanne im großen Bad."></a></div>
           <figcaption><h3>Baden</h3><p>Zwei Bäder. Im größeren dürfen Sie es sich in einer Badewanne gemütlich machen.</p></figcaption>
         </figure>
       </div>
@@ -661,13 +661,16 @@
 
   // Lightbox for all photos linked with class "zoom"
   (() => {
-    const links = [...document.querySelectorAll("a.zoom")];
+    const all = [...document.querySelectorAll("a.zoom")];
+    // The hero and room photos reappear in the gallery: page through each photo once, in gallery order
+    const links = all.filter((a, n) => !all.slice(n + 1).some((b) => b.href === a.href));
     const box = document.getElementById("lightbox");
     if (!links.length || !box || typeof box.showModal !== "function") return;
     const img = box.querySelector("img");
     const cap = box.querySelector("figcaption");
     const count = box.querySelector(".lb-count");
     let i = 0;
+    let opener = null;
     const show = (n) => {
       i = (n + links.length) % links.length;
       const thumb = links[i].querySelector("img");
@@ -677,9 +680,10 @@
       cap.textContent = fc ? fc.textContent.trim().replace(/\s+/g, " ") : "";
       count.textContent = `${i + 1} / ${links.length}`;
     };
-    links.forEach((a, n) => a.addEventListener("click", (e) => {
+    all.forEach((a) => a.addEventListener("click", (e) => {
       e.preventDefault();
-      show(n);
+      opener = a;
+      show(links.findIndex((b) => b.href === a.href));
       box.showModal();
     }));
     box.querySelector(".lb-prev").addEventListener("click", () => show(i - 1));
@@ -701,7 +705,7 @@
       if (Math.abs(dx) > 50) show(dx < 0 ? i + 1 : i - 1);
       x0 = null;
     });
-    box.addEventListener("close", () => links[i].focus({ preventScroll: true }));
+    box.addEventListener("close", () => opener?.focus({ preventScroll: true }));
   })();
 
   // Price calculator

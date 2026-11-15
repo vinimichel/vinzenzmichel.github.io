@@ -250,7 +250,7 @@ main section:last-child { border-bottom: 0; }
 .album figure { margin: 0 0 20px; break-inside: avoid; display: grid; gap: 8px; }
 .album img { width: 100%; border: 6px solid var(--paper); }
 
-/* Photos open full size in a lightbox; the hero image stays static */
+/* Every photo opens full size in a lightbox */
 .zoom { display: block; cursor: zoom-in; }
 .arch .zoom { height: 100%; }
 .zoom img { transition: filter 0.2s; }
